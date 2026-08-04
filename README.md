@@ -103,7 +103,7 @@ Two things to know if you edit the animation:
 ## Enquiry form
 
 The form has **no backend**. On submit it builds a formatted `mailto:` to
-`info@navkaris.com` and opens the visitor's email client.
+`navkarengineersandconsultants1@gmail.com` and opens the visitor's email client.
 
 To make it submit server-side instead, replace the `mailto` block at the bottom of
 `js/main.js` with a `fetch()` to a form service (Formspree, Web3Forms) or your own endpoint.
@@ -137,5 +137,5 @@ were **not** used — the production process and wall build-ups are rebuilt as n
 
 - Real project names, locations and completion dates for the gallery captions
   (currently generic labels like "Curved-roof villa").
-- A dedicated email for LGSF enquiries, if it should differ from `info@navkaris.com`.
+- Contact email set to `navkarengineersandconsultants1@gmail.com`.
 - Higher-resolution photography where available.

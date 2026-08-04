@@ -497,12 +497,12 @@
         'Built-up area: ' + (f.area.value || '—') + '\n\n' +
         'Brief:\n' + (f.msg.value || '—');
 
-      window.location.href = 'mailto:info@navkaris.com'
+      window.location.href = 'mailto:navkarengineersandconsultants1@gmail.com'
         + '?subject=' + encodeURIComponent('LGSF enquiry — ' + f.name.value + ' (' + f.type.value + ')')
         + '&body=' + encodeURIComponent(body);
 
       note.style.color = '';
-      note.textContent = 'Opening your email app… if nothing happens, write to info@navkaris.com or call +91 97277 33126.';
+      note.textContent = 'Opening your email app… if nothing happens, write to navkarengineersandconsultants1@gmail.com or call +91 97277 33126.';
     });
   }
 
