@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Navkar LGSF — Light Gauge Steel Frame Structures | Navkar InfraSynergy Pvt. Ltd.</title>
+<meta name="description" content="Light Gauge Steel Frame (LGSF) structures by Navkar InfraSynergy Pvt. Ltd. Factory-precise cold-formed steel buildings — 50% faster, ±1mm accuracy, seismic-safe up to Zone V, 50+ year design life." />
+<meta name="theme-color" content="#0b0c0e" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Navkar LGSF — The Future of Fast, Sustainable & Precision Construction" />
+<meta property="og:description" content="Cold-formed steel framing engineered to ±1mm. G+2 in 3–4 months. 100% recyclable. By Navkar InfraSynergy Pvt. Ltd." />
+<meta property="og:image" content="assets/img/hero-frame.jpg" />
+
+<link rel="icon" type="image/png" href="assets/img/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+
+<!-- Runs before first paint so the theme never flashes.
+     Also marks that JS is alive: every hidden-until-animated state is scoped to .js,
+     so with JS off or broken the page still renders fully — just without motion. -->
+<script>
+(function () {
+  var t;
+  try { t = localStorage.getItem('nispl-theme'); } catch (e) {}
+  if (t !== 'light' && t !== 'dark') {
+    t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  }
+  var r = document.documentElement;
+  r.setAttribute('data-theme', t);
+  r.className += ' js';
+})();
+</script>
+</head>
+<body>
+
+<!-- ══════════════ PRELOADER ══════════════ -->
+<div class="preloader" id="preloader">
+  <div class="preloader__inner">
+    <svg class="preloader__mark" viewBox="0 0 100 100" aria-hidden="true">
+      <polygon points="50,8 92,80 8,80" fill="none" stroke="url(#pg)" stroke-width="3" stroke-linejoin="round"/>
+      <polygon points="50,30 74,72 26,72" fill="none" stroke="url(#pg)" stroke-width="2" stroke-linejoin="round" opacity=".5"/>
+      <defs><linearGradient id="pg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#F7CE55"/><stop offset="100%" stop-color="#B77B14"/>
+      </linearGradient></defs>
+    </svg>
+    <div class="preloader__bar"><span id="preBar"></span></div>
+    <p class="preloader__txt">LIGHT GAUGE STEEL FRAME</p>
+  </div>
+</div>
+
+<div class="scroll-progress"><span id="scrollBar"></span></div>
+
+<!-- ══════════════ NAV ══════════════ -->
+<header class="nav" id="nav">
+  <div class="nav__wrap">
+    <a href="#home" class="brand" aria-label="Navkar LGSF home">
+      <img src="assets/img/logo.png" alt="" class="brand__logo" />
+      <span class="brand__txt">
+        <strong>NAVKAR</strong>
+        <em>LGSF Structures</em>
+      </span>
+    </a>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="#technology">Technology</a>
+      <a href="#advantage">Advantage</a>
+      <a href="#applications">Applications</a>
+      <a href="#specs">Specifications</a>
+      <a href="#process">Process</a>
+      <a href="#projects">Projects</a>
+      <a href="#team">Leadership</a>
+      <a href="#contact" class="nav__cta">Get a Quote</a>
+    </nav>
+
+    <button class="themetog" id="themeTog" type="button" aria-label="Switch to light theme" title="Switch theme">
+      <svg class="themetog__sun" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="4.2"/>
+        <path d="M12 1.8v2.4M12 19.8v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/>
+      </svg>
+      <svg class="themetog__moon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+      </svg>
+    </button>
+
+    <button class="nav__burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero" id="home">
+  <div class="hero__media" data-parallax="0.28">
+    <img src="assets/img/hero-frame.jpg" alt="" class="hero__img" />
+  </div>
+  <div class="hero__veil"></div>
+  <div class="hero__grid" data-parallax="0.12"></div>
+
+  <!-- animated blueprint frame -->
+  <svg class="hero__blueprint" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true" data-parallax="0.18">
+    <g class="bp" stroke="currentColor" fill="none" stroke-width="1.1">
+      <path d="M120 620 V220 L340 120 L560 220 V620" />
+      <path d="M120 220 H560" /><path d="M120 420 H560" />
+      <path d="M200 620 V220" /><path d="M280 620 V220" /><path d="M360 620 V220" /><path d="M440 620 V220" /><path d="M520 620 V220" />
+      <path d="M120 220 L340 120 L560 220" />
+      <path d="M120 420 L340 320 L560 420" opacity=".45"/>
+      <path d="M700 620 V300 H1080 V620" />
+      <path d="M700 300 L890 200 L1080 300" />
+      <path d="M700 460 H1080" />
+      <path d="M760 620 V300" /><path d="M840 620 V300" /><path d="M920 620 V300" /><path d="M1000 620 V300" />
+      <path d="M700 620 H1080" /><path d="M100 620 H600" />
+    </g>
+  </svg>
+
+  <div class="hero__content shell">
+    <p class="hero__eyebrow reveal"><span class="dot"></span>Navkar InfraSynergy Private Limited</p>
+
+    <h1 class="hero__title">
+      <span class="line"><span>LIGHT GAUGE</span></span>
+      <span class="line"><span>STEEL FRAME</span></span>
+      <span class="line"><span class="grad">STRUCTURES</span></span>
+    </h1>
+
+    <p class="hero__sub reveal">The future of fast, sustainable &amp; precision construction. Cold-formed steel,
+      engineered in a factory to <strong>±1&nbsp;mm</strong>, erected on site in weeks — not seasons.</p>
+
+    <div class="hero__actions reveal">
+      <a href="#technology" class="btn btn--gold">Explore the Technology
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="#contact" class="btn btn--ghost">Talk to an Engineer</a>
+    </div>
+
+    <div class="hero__facts reveal">
+      <div><b>50%</b><span>Faster build</span></div>
+      <div><b>±1mm</b><span>CNC accuracy</span></div>
+      <div><b>50yr</b><span>Design life</span></div>
+      <div><b>Zone V</b><span>Seismic ready</span></div>
+    </div>
+  </div>
+
+  <a href="#technology" class="hero__scroll" aria-label="Scroll down">
+    <span class="hero__mouse"><i></i></span>
+    <span class="hero__scrolltxt">SCROLL</span>
+  </a>
+</section>
+
+<!-- ══════════════ TICKER ══════════════ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track">
+    <span>COLD-FORMED STEEL</span><i>◆</i><span>G350 – G550</span><i>◆</i><span>Z275 GALVANIZED</span><i>◆</i>
+    <span>ZERO WASTAGE</span><i>◆</i><span>ALL-WEATHER BUILD</span><i>◆</i><span>100% RECYCLABLE</span><i>◆</i>
+    <span>TERMITE PROOF</span><i>◆</i><span>2-HOUR FIRE RATING</span><i>◆</i>
+    <span>COLD-FORMED STEEL</span><i>◆</i><span>G350 – G550</span><i>◆</i><span>Z275 GALVANIZED</span><i>◆</i>
+    <span>ZERO WASTAGE</span><i>◆</i><span>ALL-WEATHER BUILD</span><i>◆</i><span>100% RECYCLABLE</span><i>◆</i>
+    <span>TERMITE PROOF</span><i>◆</i><span>2-HOUR FIRE RATING</span><i>◆</i>
+  </div>
+</div>
+
+<!-- ══════════════ WHAT IS LGSF ══════════════ -->
+<section class="sec sec--intro" id="technology">
+  <div class="shell">
+    <div class="split">
+      <div class="split__text">
+        <p class="kicker reveal"><span>01</span> What is LGSF?</p>
+        <h2 class="h2 reveal">Steel, formed cold.<br /><span class="grad">Precision, built in.</span></h2>
+        <p class="lead reveal">Light Gauge Steel Framing is a modern construction technology that uses cold-formed steel
+          sections — just <strong>0.8 mm to 1.6 mm</strong> thick — to create the complete structural framework of a
+          building. The steel is shaped at room temperature through roll-forming machines, with no heat applied, so it
+          keeps its full strength and dimensional precision.</p>
+
+        <div class="minitable reveal">
+          <div class="mt__row"><span>Material</span><b>Cold-formed galvanized steel coils</b></div>
+          <div class="mt__row"><span>Thickness</span><b>0.8 – 1.6 mm (typ. 0.8 / 1.15 / 1.2)</b></div>
+          <div class="mt__row"><span>Steel Grade</span><b>G350 – G550 · 350–550 MPa yield</b></div>
+          <div class="mt__row"><span>Coating</span><b>Z275 GSM Galvanized / Galvalume (55% Al + 45% Zn)</b></div>
+          <div class="mt__row"><span>Design Life</span><b>Minimum 50 years</b></div>
+          <div class="mt__row"><span>Precision</span><b>Up to 1 mm accuracy on CNC machines</b></div>
+        </div>
+      </div>
+
+      <div class="split__media">
+        <div class="stackimg" data-parallax="0.07">
+          <img src="assets/img/lgsf-longspan.jpg" alt="Long-span light gauge steel frame structure under erection" />
+          <span class="stackimg__tag">Roll-formed C-sections · site erection</span>
+        </div>
+        <div class="stackimg stackimg--sm" data-parallax="0.16">
+          <img src="assets/img/panel-interior.jpg" alt="Internal LGSF wall panels and studs" />
+        </div>
+      </div>
+    </div>
+
+    <!-- how it works chain -->
+    <div class="chain reveal">
+      <p class="chain__label">How it works</p>
+      <ol class="chain__list">
+        <li><span>01</span>Steel coils</li>
+        <li><span>02</span>Roll-forming</li>
+        <li><span>03</span>Cutting &amp; punching</li>
+        <li><span>04</span>Quality control</li>
+        <li><span>05</span>Panel assembly</li>
+        <li><span>06</span>Site erection</li>
+        <li><span>07</span>Cladding &amp; finishing</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PARALLAX BREAK 1 ══════════════ -->
+<section class="break" aria-hidden="false">
+  <div class="break__media" data-parallax="0.3">
+    <img src="assets/img/site-erect.jpg" alt="" />
+  </div>
+  <div class="break__inner shell">
+    <h3 class="break__quote reveal">“A G+2 structure that takes <em>12–18 months</em> in RCC<br />
+      is complete in <span class="grad">3–4 months</span> with LGSF.”</h3>
+  </div>
+</section>
+
+<!-- ══════════════ BOTTLENECKS ══════════════ -->
+<section class="sec sec--dark" id="bottleneck">
+  <div class="shell">
+    <div class="sechead">
+      <p class="kicker reveal"><span>02</span> The problem</p>
+      <h2 class="h2 reveal">Where conventional<br />construction breaks down</h2>
+      <p class="lead lead--center reveal">Seven bottlenecks quietly decide whether your project lands on time and on
+        budget. Every one of them is structural to the way RCC is built.</p>
+    </div>
+
+    <div class="bgrid">
+      <article class="bcard reveal">
+        <div class="bcard__ico">
+          <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>
+        </div>
+        <h4>Manpower availability</h4>
+        <p>Skilled labour shortage; high dependency on masons and carpenters; inconsistent quality across crews.</p>
+      </article>
+      <article class="bcard reveal">
+        <div class="bcard__ico">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        </div>
+        <h4>Extended duration</h4>
+        <p>RCC construction takes 12–18 months for a G+2. Weather-dependent activities push the schedule further.</p>
+      </article>
+      <article class="bcard reveal">
+        <div class="bcard__ico">
+          <svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7v6h-6"/></svg>
+        </div>
+        <h4>Escalating costs</h4>
+        <p>Material wastage of 15–20%, labour costs rising 10–15% every year, plus recurring rework expenses.</p>
+      </article>
+      <article class="bcard reveal">
+        <div class="bcard__ico">
+          <svg viewBox="0 0 24 24"><path d="M18 10a6 6 0 1 0-12 0c0 4-2 5-2 5h16s-2-1-2-5"/><path d="M10 20a2 2 0 0 0 4 0"/></svg>
+        </div>
+        <h4>Project delays</h4>
+        <p>Monsoon stoppages, concrete curing time, and constant coordination friction between trades.</p>
+      </article>
+      <article class="bcard reveal">
+        <div class="bcard__ico">
+          <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/><path d="M2 20h20" opacity=".4"/></svg>
+        </div>
+        <h4>Quality inconsistency</h4>
+        <p>Human-dependent accuracy leads to dimensional errors and poor finish quality that surface late.</p>
+      </article>
+      <article class="bcard reveal">
+        <div class="bcard__ico">
+          <svg viewBox="0 0 24 24"><path d="M12 2s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg>
+        </div>
+        <h4>Environmental impact</h4>
+        <p>High water consumption, dust pollution, and construction waste heading straight to landfill.</p>
+      </article>
+      <article class="bcard reveal">
+        <div class="bcard__ico">
+          <svg viewBox="0 0 24 24"><path d="M4 21V9l8-6 8 6v12"/><path d="M9 21v-7h6v7"/></svg>
+        </div>
+        <h4>Structural limitations</h4>
+        <p>Heavy foundation requirements, limited seismic performance, and long-term cracking issues.</p>
+      </article>
+      <article class="bcard bcard--cta reveal">
+        <h4>Every one of these<br /><span class="grad">has an LGSF answer.</span></h4>
+        <a href="#advantage" class="btn btn--gold btn--sm">See the comparison
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ ADVANTAGES ══════════════ -->
+<section class="sec sec--adv" id="advantage">
+  <div class="shell">
+    <div class="sechead">
+      <p class="kicker reveal"><span>03</span> The advantage</p>
+      <h2 class="h2 reveal">How LGSF solves<br /><span class="grad">every bottleneck</span></h2>
+    </div>
+
+    <div class="ctable">
+      <div class="ctable__head">
+        <span>Conventional problem</span><span>LGSF solution</span><span>Benefit</span>
+      </div>
+
+      <div class="ctable__row reveal">
+        <div class="c1">Manpower shortage</div>
+        <div class="c2">Factory prefabrication, mechanised production</div>
+        <div class="c3"><b>60–70%</b> reduction in on-site labour</div>
+      </div>
+      <div class="ctable__row reveal">
+        <div class="c1">Long duration</div>
+        <div class="c2">Ready-to-install panels, dry construction</div>
+        <div class="c3"><b>50% faster</b> — G+2 in 3–4 months</div>
+      </div>
+      <div class="ctable__row reveal">
+        <div class="c1">Rising costs</div>
+        <div class="c2">Zero material wastage, optimised design</div>
+        <div class="c3"><b>15–20%</b> overall cost savings</div>
+      </div>
+      <div class="ctable__row reveal">
+        <div class="c1">Weather delays</div>
+        <div class="c2">All-weather installation, no curing period</div>
+        <div class="c3"><b>Continuous</b> construction schedule</div>
+      </div>
+      <div class="ctable__row reveal">
+        <div class="c1">Quality issues</div>
+        <div class="c2">CNC precision, factory-controlled environment</div>
+        <div class="c3">Consistent quality, <b>±1&nbsp;mm</b> accuracy</div>
+      </div>
+      <div class="ctable__row reveal">
+        <div class="c1">Environmental concern</div>
+        <div class="c2">100% recyclable steel, minimal water use</div>
+        <div class="c3"><b>Green building</b> certification eligible</div>
+      </div>
+      <div class="ctable__row reveal">
+        <div class="c1">Seismic performance</div>
+        <div class="c2">Lightweight, ductile steel frame</div>
+        <div class="c3">Earthquake resistant up to <b>Zone V</b></div>
+      </div>
+    </div>
+
+    <div class="feats">
+      <div class="feat reveal">
+        <svg viewBox="0 0 24 24"><path d="M12 2v20M5 8l7-6 7 6"/></svg>
+        <h4>Lightweight</h4>
+        <p>40–50% lighter than concrete — foundation costs drop by 30–40%.</p>
+      </div>
+      <div class="feat reveal">
+        <svg viewBox="0 0 24 24"><path d="M12 22c4 0 7-3 7-7 0-5-7-13-7-13S5 10 5 15c0 4 3 7 7 7z"/></svg>
+        <h4>Fire resistant</h4>
+        <p>Non-combustible steel with fire-rated coatings — up to 2 hours with proper cladding.</p>
+      </div>
+      <div class="feat reveal">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M6 6l12 12"/></svg>
+        <h4>Termite &amp; pest proof</h4>
+        <p>No organic material anywhere in the frame — zero pest infestation, ever.</p>
+      </div>
+      <div class="feat reveal">
+        <svg viewBox="0 0 24 24"><path d="M3 12s3-7 9-7 9 7 9 7-3 7-9 7-9-7-9-7z"/><circle cx="12" cy="12" r="2.5"/></svg>
+        <h4>Design flexibility</h4>
+        <p>Complex geometries, curved walls and large spans are all achievable.</p>
+      </div>
+      <div class="feat reveal">
+        <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        <h4>Future-ready</h4>
+        <p>Easy MEP integration — service holes are pre-punched in the factory.</p>
+      </div>
+      <div class="feat reveal">
+        <svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M21 3v6h-6"/></svg>
+        <h4>Fully recyclable</h4>
+        <p>Steel is 100% recyclable — dismantle, relocate or recover value at end of life.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ STATS COUNTER ══════════════ -->
+<section class="stats">
+  <div class="stats__bg" data-parallax="0.22"><img src="assets/img/frame-wide.jpg" alt="" /></div>
+  <div class="shell stats__grid">
+    <div class="stat reveal"><b><span class="count" data-to="50">0</span>%</b><span>Faster construction</span></div>
+    <div class="stat reveal"><b><span class="count" data-to="70">0</span>%</b><span>Less on-site labour</span></div>
+    <div class="stat reveal"><b><span class="count" data-to="20">0</span>%</b><span>Cost savings</span></div>
+    <div class="stat reveal"><b><span class="count" data-to="50">0</span>+</b><span>Year design life</span></div>
+    <div class="stat reveal"><b><span class="count" data-to="100">0</span>%</b><span>Recyclable steel</span></div>
+  </div>
+</section>
+
+<!-- ══════════════ WHEN TO CHOOSE ══════════════ -->
+<section class="sec" id="when">
+  <div class="shell">
+    <div class="sechead">
+      <p class="kicker reveal"><span>04</span> Requirement</p>
+      <h2 class="h2 reveal">When to choose LGSF</h2>
+      <p class="lead lead--center reveal">Eight situations where light gauge steel is not just an alternative — it is
+        the correct engineering answer.</p>
+    </div>
+
+    <div class="whengrid">
+      <div class="when reveal"><span class="when__n">01</span><h4>Time-critical projects</h4><p>Fast-track construction needs with fixed handover dates.</p></div>
+      <div class="when reveal"><span class="when__n">02</span><h4>Manpower-constrained sites</h4><p>Remote locations and labour shortage areas.</p></div>
+      <div class="when reveal"><span class="when__n">03</span><h4>Seismic zones</h4><p>Where high earthquake resistance is required.</p></div>
+      <div class="when reveal"><span class="when__n">04</span><h4>Rooftop extensions</h4><p>Lightweight — minimal load on the existing structure.</p></div>
+      <div class="when reveal"><span class="when__n">05</span><h4>Temporary / relocatable</h4><p>Can be dismantled and reassembled elsewhere.</p></div>
+      <div class="when reveal"><span class="when__n">06</span><h4>Green building projects</h4><p>LEED / IGBC certification targets.</p></div>
+      <div class="when reveal"><span class="when__n">07</span><h4>Repetitive construction</h4><p>Mass housing, hotels, hostels and campuses.</p></div>
+      <div class="when reveal"><span class="when__n">08</span><h4>Difficult terrain</h4><p>Hilly areas and poor soil conditions.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ APPLICATIONS ══════════════ -->
+<section class="sec sec--dark" id="applications">
+  <div class="shell">
+    <div class="sechead">
+      <p class="kicker reveal"><span>05</span> Applications</p>
+      <h2 class="h2 reveal">Project types<br /><span class="grad">suitable for LGSF</span></h2>
+    </div>
+
+    <div class="segrid">
+      <article class="seg seg--industrial reveal">
+        <div class="seg__top"><span class="seg__ix">01</span><h4>Industrial</h4></div>
+        <ul><li>Townships</li><li>SEZs</li><li>Industrial canteen</li><li>Warehouses</li><li>Storage</li><li>Kitchen area</li><li>Guard room</li><li>Panel room</li><li>Pump room</li></ul>
+      </article>
+      <article class="seg seg--residential reveal">
+        <div class="seg__top"><span class="seg__ix">02</span><h4>Residential</h4></div>
+        <ul><li>Low-rise</li><li>Villas</li><li>Countryside homes</li><li>Weekend homes</li><li>Farm houses</li><li>Hostels</li><li>Old-age homes</li></ul>
+      </article>
+      <article class="seg seg--commercial reveal">
+        <div class="seg__top"><span class="seg__ix">03</span><h4>Commercial</h4></div>
+        <ul><li>Low-rise office buildings</li><li>IT parks</li><li>Business parks</li><li>Water parks</li></ul>
+      </article>
+      <article class="seg seg--public reveal">
+        <div class="seg__top"><span class="seg__ix">04</span><h4>Public buildings</h4></div>
+        <ul><li>Shopping malls</li><li>Theatres</li><li>Healthcare</li><li>Hotels &amp; resorts</li><li>Schools</li><li>Colleges</li><li>Museums</li></ul>
+      </article>
+      <article class="seg seg--extension reveal">
+        <div class="seg__top"><span class="seg__ix">05</span><h4>Extensions</h4></div>
+        <ul><li>Vertical extension of any existing building</li><li>Rooftop floors</li><li>Additional wings</li></ul>
+      </article>
+      <article class="seg seg--other reveal">
+        <div class="seg__top"><span class="seg__ix">06</span><h4>Other</h4></div>
+        <ul><li>Portable buildings</li><li>Marketing offices</li><li>Site offices</li></ul>
+      </article>
+    </div>
+
+    <!-- SYSTEMS TABS -->
+    <div class="systems">
+      <div class="sechead sechead--tight">
+        <h3 class="h3 reveal">Building systems we deliver</h3>
+      </div>
+
+      <div class="tabs reveal">
+        <div class="tabs__bar" role="tablist">
+          <button class="tab is-active" role="tab" data-tab="wall">Wall system</button>
+          <button class="tab" role="tab" data-tab="roof">Roof system</button>
+          <button class="tab" role="tab" data-tab="floor">Floor system</button>
+          <button class="tab" role="tab" data-tab="special">Special applications</button>
+        </div>
+
+        <div class="tabs__panels">
+          <!-- WALL -->
+          <div class="panel is-active" data-panel="wall">
+            <div class="panel__grid">
+              <div class="panel__body">
+                <div class="dtable">
+                  <div class="dt__head"><span>Wall type</span><span>Application</span><span>Configuration</span></div>
+                  <div class="dt__row"><span>External load-bearing</span><span>Primary structure</span><span>89 / 150 mm studs @ 400 mm c/c · 0.95–1.15 mm</span></div>
+                  <div class="dt__row"><span>Internal load-bearing</span><span>Floor support</span><span>89 mm studs @ 400 mm c/c, double studs at openings</span></div>
+                  <div class="dt__row"><span>Non-load-bearing partition</span><span>Room division</span><span>89 mm studs @ 600 mm c/c · 0.75 mm</span></div>
+                  <div class="dt__row"><span>Parapet wall</span><span>Roof edge protection</span><span>89 mm studs @ 600 mm c/c</span></div>
+                </div>
+                <div class="buildup">
+                  <div class="bu">
+                    <h5>External wall build-up</h5>
+                    <ol><li>10 mm Fibre Cement Board</li><li>50 mm Rockwool insulation</li><li>12.5 mm Gypsum board</li></ol>
+                  </div>
+                  <div class="bu">
+                    <h5>Internal wall build-up</h5>
+                    <ol><li>12.5 mm Gypsum board</li><li>50 mm insulation</li><li>6 mm Fibre Cement Board</li></ol>
+                  </div>
+                </div>
+              </div>
+              <figure class="panel__fig"><img src="assets/img/panel-interior.jpg" alt="LGSF wall panel framing on site" /></figure>
+            </div>
+          </div>
+
+          <!-- ROOF -->
+          <div class="panel" data-panel="roof">
+            <div class="panel__grid">
+              <div class="panel__body">
+                <div class="dtable dtable--2">
+                  <div class="dt__head"><span>Roof type</span><span>Description</span></div>
+                  <div class="dt__row"><span>Flat roof</span><span>Floor joists with decking sheet plus concrete or screed topping</span></div>
+                  <div class="dt__row"><span>Pitched / gable roof</span><span>Steel trusses with purlins, finished in metal sheets or tiles</span></div>
+                  <div class="dt__row"><span>Curved roof</span><span>Custom-bent steel sections for architectural designs</span></div>
+                  <div class="dt__row"><span>Terrace roof</span><span>Waterproofing with insulation and a walking surface</span></div>
+                </div>
+                <p class="note">Roof trusses span up to <b>12 m</b> — column-free interiors without heavy steel.</p>
+              </div>
+              <figure class="panel__fig"><img src="assets/img/roof-truss.jpg" alt="LGSF roof truss erection" /></figure>
+            </div>
+          </div>
+
+          <!-- FLOOR -->
+          <div class="panel" data-panel="floor">
+            <div class="panel__grid">
+              <div class="panel__body">
+                <ul class="ticklist">
+                  <li>Floor joists (C-sections) @ <b>400 mm c/c</b></li>
+                  <li>Decking sheet + concrete topping of <b>50–75 mm</b></li>
+                  <li>Or FCB board for non-walkable areas</li>
+                  <li>Clear spans up to <b>6 m</b> for floor joists</li>
+                  <li>Typical load bearing <b>50–100 kg/m²</b>; higher with thicker sections</li>
+                </ul>
+              </div>
+              <figure class="panel__fig"><img src="assets/img/floor-deck.jpg" alt="LGSF floor joists with steel decking" /></figure>
+            </div>
+          </div>
+
+          <!-- SPECIAL -->
+          <div class="panel" data-panel="special">
+            <div class="panel__grid">
+              <div class="panel__body">
+                <div class="spgrid">
+                  <div><h5>Mezzanine floors</h5><p>Intermediate floors inside warehouses and industrial sheds.</p></div>
+                  <div><h5>Staircases</h5><p>Steel stringers with treads, factory-cut to drawing.</p></div>
+                  <div><h5>Canopies &amp; projections</h5><p>Cantilevered structures and entrance features.</p></div>
+                  <div><h5>Façade cladding</h5><p>External skin support framework over any primary structure.</p></div>
+                </div>
+              </div>
+              <figure class="panel__fig"><img src="assets/img/gable-frame.jpg" alt="Special LGSF application — gable framing" /></figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PARALLAX BREAK 2 ══════════════ -->
+<section class="break break--alt">
+  <div class="break__media" data-parallax="0.28">
+    <img src="assets/img/hill-frame.jpg" alt="" />
+  </div>
+  <div class="break__inner shell">
+    <h3 class="break__quote reveal">Built on hills, in monsoon,<br />on <span class="grad">poor soil</span> — without a pause.</h3>
+  </div>
+</section>
+
+<!-- ══════════════ SPECIFICATIONS ══════════════ -->
+<section class="sec" id="specs">
+  <div class="shell">
+    <div class="sechead">
+      <p class="kicker reveal"><span>06</span> Specifications</p>
+      <h2 class="h2 reveal">Material &amp; structural<br />specifications</h2>
+    </div>
+
+    <div class="specrow">
+      <div class="speccard reveal">
+        <h4 class="speccard__t"><span>01</span> Steel specification</h4>
+        <div class="dtable dtable--3">
+          <div class="dt__head"><span>Parameter</span><span>Standard</span><span>Value</span></div>
+          <div class="dt__row"><span>Base material</span><span>Hot-dip galvanized coil</span><span>ASTM A653 / A792</span></div>
+          <div class="dt__row"><span>Thickness range</span><span>0.75 – 1.6 mm</span><span>As per design</span></div>
+          <div class="dt__row"><span>Yield strength</span><span>G350 / G550</span><span>350 – 550 MPa</span></div>
+          <div class="dt__row"><span>Zinc coating</span><span>Z275</span><span>275 g/m² minimum</span></div>
+          <div class="dt__row"><span>Coating type</span><span>Galvanized / Galvalume</span><span>55% Al-Zn alloy</span></div>
+        </div>
+      </div>
+
+      <div class="speccard reveal">
+        <h4 class="speccard__t"><span>02</span> Section profiles</h4>
+        <div class="dtable dtable--3">
+          <div class="dt__head"><span>Profile</span><span>Dimensions</span><span>Usage</span></div>
+          <div class="dt__row"><span>C-Stud</span><span>89 × 41 × 0.75–1.15 mm</span><span>Wall studs</span></div>
+          <div class="dt__row"><span>U-Track</span><span>100 × 50 × 1.0–1.6 mm</span><span>Top &amp; bottom plates</span></div>
+          <div class="dt__row"><span>C-Joist</span><span>150 × 50 × 1.0–1.6 mm</span><span>Floor joists</span></div>
+          <div class="dt__row"><span>L-Angle</span><span>50 × 50 × 1.2 mm</span><span>Bracing, connections</span></div>
+          <div class="dt__row"><span>Hat Channel</span><span>75 × 38 × 0.9 mm</span><span>Ceiling, bridging</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="specrow specrow--b">
+      <div class="speccard reveal">
+        <h4 class="speccard__t"><span>03</span> Cladding &amp; finishing</h4>
+        <div class="dtable dtable--3">
+          <div class="dt__head"><span>Layer</span><span>Material</span><span>Thickness</span></div>
+          <div class="dt__row"><span>External cladding</span><span>Fibre Cement Board / Bison Board / concrete panel</span><span>8–12 mm or 20 mm</span></div>
+          <div class="dt__row"><span>Internal cladding</span><span>Gypsum board / FCB</span><span>8–12 mm</span></div>
+          <div class="dt__row"><span>Insulation</span><span>Rockwool / Glasswool</span><span>50–100 mm</span></div>
+          <div class="dt__row"><span>Vapour barrier</span><span>Aluminium foil / building wrap</span><span>0.1 mm</span></div>
+          <div class="dt__row"><span>Fasteners</span><span>Self-drilling screws, anchor bolts</span><span>#8 to #12 gauge</span></div>
+        </div>
+      </div>
+
+      <div class="speccard speccard--feat reveal">
+        <h4 class="speccard__t"><span>04</span> Structural capability</h4>
+        <div class="capgrid">
+          <div class="cap"><b>G+3</b><span>Purely LGSF</span></div>
+          <div class="cap"><b>G+4 – G+6</b><span>Hybrid (HR + LGSF)</span></div>
+          <div class="cap"><b>6 m</b><span>Floor joist span</span></div>
+          <div class="cap"><b>12 m</b><span>Roof truss span</span></div>
+          <div class="cap"><b>50–100</b><span>kg/m² typical load</span></div>
+          <div class="cap"><b>2 hr</b><span>Fire rating with cladding</span></div>
+        </div>
+        <div class="codes">
+          <p class="codes__l">Design codes &amp; compliance</p>
+          <div class="codes__chips">
+            <span>IS 801:1975</span><span>AISI S100</span><span>AS/NZS 4600:2005</span>
+            <span>IS 1893:2002 — Seismic</span><span>ASTM A1003 Gr. 33/50/80</span><span>Z275 GSM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PRODUCTION PROCESS — horizontal parallax ══════════════ -->
+<section class="hsec" id="process">
+  <div class="hsec__sticky">
+    <div class="hsec__head shell">
+      <p class="kicker"><span>07</span> Production</p>
+      <h2 class="h2">How LGSF is produced</h2>
+      <p class="hsec__hint">Factory manufacturing process — scroll to advance <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+    </div>
+
+    <div class="hsec__track" id="hTrack">
+      <article class="pstep">
+        <span class="pstep__n">01</span>
+        <h4>Design &amp; engineering</h4>
+        <p>Architectural and structural drawings are converted into a member-level model, then translated directly into CNC machine programming.</p>
+        <ul><li>Architectural drawings</li><li>Structural design</li><li>CNC machine programming</li></ul>
+      </article>
+      <article class="pstep">
+        <span class="pstep__n">02</span>
+        <h4>Material preparation</h4>
+        <p>Galvanized coils are inspected on arrival, then decoiled and straightened ready for continuous profiling.</p>
+        <ul><li>Steel coil inspection</li><li>Decoiling &amp; straightening</li><li>Coating verification</li></ul>
+      </article>
+      <article class="pstep">
+        <span class="pstep__n">03</span>
+        <h4>Roll forming</h4>
+        <p>Cold-forming at room temperature through the roll-former — continuous profiling with punching, dimpling and cutting in a single pass.</p>
+        <ul><li>Cold-forming, no heat</li><li>Continuous profiling</li><li>Service holes pre-punched</li></ul>
+      </article>
+      <article class="pstep">
+        <span class="pstep__n">04</span>
+        <h4>Quality control</h4>
+        <p>Every batch is dimensionally verified, coating thickness checked and strength tested before it moves to assembly.</p>
+        <ul><li>Dimensional verification ±1 mm</li><li>Coating thickness check</li><li>Strength testing</li></ul>
+      </article>
+      <article class="pstep">
+        <span class="pstep__n">05</span>
+        <h4>Panel assembly</h4>
+        <p>Wall panels, roof trusses and floor joists are jig-assembled, screwed and labelled to the erection drawing.</p>
+        <ul><li>Wall panel assembly</li><li>Roof trusses &amp; floor joists</li><li>Panel labelling by grid</li></ul>
+      </article>
+      <article class="pstep">
+        <span class="pstep__n">06</span>
+        <h4>Packaging &amp; dispatch</h4>
+        <p>Protective wrapping, bundling on wooden pallets, and a full documentation set travelling with the load.</p>
+        <ul><li>Protective wrapping</li><li>Bundled on pallets</li><li>Packing list &amp; BOM</li></ul>
+      </article>
+      <article class="pstep pstep--end">
+        <span class="pstep__n">07</span>
+        <h4>Site erection</h4>
+        <p>Dry assembly on prepared foundations — bolted, braced and clad. No curing, no weather window.</p>
+        <a href="#erection" class="btn btn--gold btn--sm">See erection sequence
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+    </div>
+
+    <div class="hsec__bar"><span id="hBar"></span></div>
+  </div>
+</section>
+
+<!-- ══════════════ TRANSPORT & ERECTION ══════════════ -->
+<section class="sec sec--dark" id="erection">
+  <div class="shell">
+    <div class="sechead">
+      <p class="kicker reveal"><span>08</span> Delivery</p>
+      <h2 class="h2 reveal">Transportation &amp; erection</h2>
+      <p class="lead lead--center reveal">From factory floor to finished building.</p>
+    </div>
+
+    <div class="tsplit">
+      <div class="tsplit__l reveal">
+        <h3 class="h3">Transportation</h3>
+        <div class="dtable dtable--2">
+          <div class="dt__head"><span>Aspect</span><span>Details</span></div>
+          <div class="dt__row"><span>Packaging</span><span>Bundled panels, trusses on pallets</span></div>
+          <div class="dt__row"><span>Loading</span><span>Containerised or open truck</span></div>
+          <div class="dt__row"><span>Handling</span><span>Forklift / crane at both ends</span></div>
+          <div class="dt__row"><span>Protection</span><span>Waterproof covering, edge protection</span></div>
+          <div class="dt__row"><span>Documentation</span><span>Packing list, erection drawings, bill of materials</span></div>
+        </div>
+        <figure class="tfig" data-parallax="0.06">
+          <img src="assets/img/site-erect-2.jpg" alt="LGSF panels being erected on site" />
+        </figure>
+      </div>
+
+      <div class="tsplit__r">
+        <h3 class="h3 reveal">Site erection sequence</h3>
+        <ol class="timeline">
+          <li class="reveal"><span>1</span><div><h5>Foundation preparation</h5><p>Anchor bolt installation to erection drawing.</p></div></li>
+          <li class="reveal"><span>2</span><div><h5>Bottom track placement</h5><p>Tracks laid and levelled across the footprint.</p></div></li>
+          <li class="reveal"><span>3</span><div><h5>Wall panel erection</h5><p>Panels lifted, plumbed and temporarily braced.</p></div></li>
+          <li class="reveal"><span>4</span><div><h5>Floor joist installation</h5><p>C-joists set at 400 mm c/c and fixed.</p></div></li>
+          <li class="reveal"><span>5</span><div><h5>Roof truss placement</h5><p>Trusses craned into position and aligned.</p></div></li>
+          <li class="reveal"><span>6</span><div><h5>Structural connections</h5><p>All screwed and bolted connections tightened.</p></div></li>
+          <li class="reveal"><span>7</span><div><h5>Cladding &amp; insulation</h5><p>External FCB, insulation and internal boards.</p></div></li>
+          <li class="reveal"><span>8</span><div><h5>MEP services integration</h5><p>Routed through pre-punched service holes.</p></div></li>
+          <li class="reveal"><span>9</span><div><h5>Finishing works</h5><p>Joint treatment, painting and handover.</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PROJECTS ══════════════ -->
+<section class="sec sec--proj" id="projects">
+  <div class="shell">
+    <div class="sechead">
+      <p class="kicker reveal"><span>09</span> Portfolio</p>
+      <h2 class="h2 reveal">Project snaps</h2>
+      <p class="lead lead--center reveal">Structure, envelope and finish — delivered.</p>
+    </div>
+  </div>
+
+  <div class="gal">
+    <div class="gal__col" data-parallax="0.05">
+      <figure class="shot reveal"><img src="assets/img/g2-frame.jpg" alt="G+2 LGSF frame in an urban site" loading="lazy" /><figcaption>G+2 structural frame</figcaption></figure>
+      <figure class="shot reveal"><img src="assets/img/lobby.jpg" alt="Finished interior lobby in an LGSF building" loading="lazy" /><figcaption>Finished lobby</figcaption></figure>
+      <figure class="shot reveal"><img src="assets/img/hill-frame.jpg" alt="LGSF framing on a hillside site" loading="lazy" /><figcaption>Hill-side erection</figcaption></figure>
+      <figure class="shot reveal"><img src="assets/img/hostel-room.jpg" alt="Completed hostel room" loading="lazy" /><figcaption>Hostel accommodation</figcaption></figure>
+    </div>
+    <div class="gal__col" data-parallax="0.13">
+      <figure class="shot reveal"><img src="assets/img/villa-roof.jpg" alt="Completed villa with curved roof" loading="lazy" /><figcaption>Curved-roof villa</figcaption></figure>
+      <figure class="shot reveal"><img src="assets/img/frame-tall.jpg" alt="Multi-storey LGSF frame" loading="lazy" /><figcaption>Multi-storey frame</figcaption></figure>
+      <figure class="shot reveal"><img src="assets/img/campus.jpg" alt="Completed campus building" loading="lazy" /><figcaption>Institutional campus</figcaption></figure>
+      <figure class="shot reveal"><img src="assets/img/bath-lux.jpg" alt="Finished bathroom interior" loading="lazy" /><figcaption>Wet-area finishing</figcaption></figure>
+    </div>
+    <div class="gal__col" data-parallax="0.02">
+      <figure class="shot reveal"><img src="assets/img/facade-glass.jpg" alt="Glass façade on an LGSF commercial building" loading="lazy" /><figcaption>Commercial façade</figcaption></figure>
+      <figure class="shot reveal"><img src="assets/img/gable-frame.jpg" alt="Gable roof framing" loading="lazy" /><figcaption>Gable truss framing</figcaption></figure>
+      <figure class="shot reveal"><img src="assets/img/school.jpg" alt="Completed school building" loading="lazy" /><figcaption>School building</figcaption></figure>
+      <figure class="shot reveal"><img src="assets/img/cafe.jpg" alt="Café interior fit-out" loading="lazy" /><figcaption>Hospitality fit-out</figcaption></figure>
+    </div>
+    <div class="gal__col gal__col--hide" data-parallax="0.16">
+      <figure class="shot reveal"><img src="assets/img/clinic.jpg" alt="Healthcare building" loading="lazy" /><figcaption>Healthcare block</figcaption></figure>
+      <figure class="shot reveal"><img src="assets/img/resort-interior.jpg" alt="Resort interior" loading="lazy" /><figcaption>Resort interior</figcaption></figure>
+      <figure class="shot reveal"><img src="assets/img/portacabin.jpg" alt="Portable site building" loading="lazy" /><figcaption>Portable site office</figcaption></figure>
+      <figure class="shot reveal"><img src="assets/img/corridor.jpg" alt="Internal corridor" loading="lazy" /><figcaption>Circulation corridor</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ TEAM ══════════════ -->
+<section class="sec" id="team">
+  <div class="shell">
+    <div class="sechead">
+      <p class="kicker reveal"><span>10</span> Leadership</p>
+      <h2 class="h2 reveal">The people behind<br />the structure</h2>
+    </div>
+
+    <div class="team">
+      <article class="member reveal">
+        <div class="member__ph"><img src="assets/img/team-mitesh.jpg" alt="Mitesh Shah" loading="lazy" /></div>
+        <div class="member__body">
+          <h4>Mitesh Shah</h4><p class="member__role">Chief Executive Officer</p>
+          <p>Over 22 years of distinguished corporate-level experience in real estate and infrastructure projects. A gold
+            medallist in his master's programme at The MSU of Baroda, he has consistently been at the forefront of
+            integrating cutting-edge technology into construction and setting new standards in the industry.</p>
+        </div>
+      </article>
+
+      <article class="member reveal">
+        <div class="member__ph"><img src="assets/img/team-vipul.jpg" alt="Vipul Patel" loading="lazy" /></div>
+        <div class="member__body">
+          <h4>Vipul Patel</h4><p class="member__role">Director</p>
+          <p>A Civil Engineer with a career spanning over three decades, with unparalleled expertise in both the execution
+            and maintenance of a diverse range of real estate and industrial projects — ensuring their longevity and
+            sustainability through meticulous maintenance.</p>
+        </div>
+      </article>
+
+      <article class="member reveal">
+        <div class="member__ph"><img src="assets/img/team-jayendra.jpg" alt="Jayendra Pathak" loading="lazy" /></div>
+        <div class="member__body">
+          <h4>Jayendra Pathak</h4><p class="member__role">Director</p>
+          <p>A distinguished Civil Engineer with over 30 years of PMC expertise across pharma, FMCG and power plants. He
+            has successfully executed industrial infrastructure development for 20 MNCs pan-India, and holds LEED-AP and
+            IGBC-AP accreditations championing sustainable construction.</p>
+        </div>
+      </article>
+
+      <article class="member reveal">
+        <div class="member__ph"><img src="assets/img/team-nihar.jpg" alt="Nihar Nathwani" loading="lazy" /></div>
+        <div class="member__body">
+          <h4>Nihar Nathwani</h4><p class="member__role">Head — Marketing &amp; Sales</p>
+          <p>18 years of experience crafting business strategy and engaging clients at international and national level.
+            Renowned for converting leads into substantial business and for building the relationships that drive
+            long-term growth.</p>
+        </div>
+      </article>
+
+      <article class="member reveal">
+        <div class="member__ph"><img src="assets/img/team-prashant.jpg" alt="Prashant Barot" loading="lazy" /></div>
+        <div class="member__body">
+          <h4>Prashant Barot</h4><p class="member__role">Head — Operations</p>
+          <p>Over two decades leading operations with a focus on strategic planning and financial precision. His
+            background spans end-to-end management of complex projects including luxury hospitality and large-scale
+            residential infrastructure. Holds a Master's in Construction Management.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CONTACT ══════════════ -->
+<section class="cta" id="contact">
+  <div class="cta__bg" data-parallax="0.2"><img src="assets/img/frame-tall.jpg" alt="" /></div>
+  <div class="shell cta__grid">
+    <div class="cta__l">
+      <p class="kicker reveal"><span>11</span> Get in touch</p>
+      <h2 class="h2 reveal">Let's engineer<br /><span class="grad">your next building.</span></h2>
+      <p class="lead reveal">Send us your drawings, footprint or a simple brief. We will come back with a feasibility
+        view, an indicative schedule and a budget range for delivering it in light gauge steel.</p>
+
+      <div class="contacts reveal">
+        <a class="ccard" href="tel:+919727733126">
+          <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          <span><b>Nihar Nathwani</b>+91 97277 33126</span>
+        </a>
+        <a class="ccard" href="mailto:info@navkaris.com">
+          <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 6 10-6"/></svg>
+          <span><b>Email</b>info@navkaris.com</span>
+        </a>
+        <div class="ccard ccard--static">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span><b>Vadodara Office</b>5 – White House, Vishwas Colony, Alkapuri Petrol Pump Lane, Alkapuri, Vadodara, Gujarat, India — 390007</span>
+        </div>
+      </div>
+    </div>
+
+    <form class="form reveal" id="enquiry" novalidate>
+      <h3>Project enquiry</h3>
+      <div class="f2">
+        <label>Name<input type="text" name="name" required placeholder="Your full name" /></label>
+        <label>Phone<input type="tel" name="phone" required placeholder="+91" /></label>
+      </div>
+      <label>Email<input type="email" name="email" required placeholder="you@company.com" /></label>
+      <div class="f2">
+        <label>Project type
+          <select name="type">
+            <option>Residential</option><option>Industrial</option><option>Commercial</option>
+            <option>Public building</option><option>Extension / rooftop</option><option>Portable / site office</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label>Built-up area (sq ft)<input type="text" name="area" placeholder="e.g. 4,500" /></label>
+      </div>
+      <label>Brief<textarea name="msg" rows="4" placeholder="Location, storeys, target timeline…"></textarea></label>
+      <button type="submit" class="btn btn--gold btn--full">Send enquiry
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+      <p class="form__note" id="formNote"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer class="foot">
+  <div class="shell foot__grid">
+    <div class="foot__brand">
+      <a href="#home" class="brand brand--foot">
+        <img src="assets/img/logo.png" alt="" class="brand__logo" />
+        <span class="brand__txt"><strong>NAVKAR</strong><em>InfraSynergy Pvt. Ltd.</em></span>
+      </a>
+      <p>Integrated solutions for Building, Industry, Environment &amp; Highway.</p>
+      <a class="foot__x" href="https://navkaris.com/index.html" target="_blank" rel="noopener">
+        Visit our consulting practice
+        <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg>
+      </a>
+    </div>
+
+    <div class="foot__col">
+      <h5>Explore</h5>
+      <a href="#technology">What is LGSF</a><a href="#advantage">Advantages</a>
+      <a href="#applications">Applications</a><a href="#specs">Specifications</a>
+    </div>
+    <div class="foot__col">
+      <h5>Delivery</h5>
+      <a href="#process">Production process</a><a href="#erection">Transport &amp; erection</a>
+      <a href="#projects">Projects</a><a href="#team">Leadership</a>
+    </div>
+    <div class="foot__col">
+      <h5>Contact</h5>
+      <a href="tel:+919727733126">+91 97277 33126</a>
+      <a href="mailto:info@navkaris.com">info@navkaris.com</a>
+      <span>5 – White House, Vishwas Colony,<br />Alkapuri, Vadodara, Gujarat 390007</span>
+    </div>
+  </div>
+  <div class="foot__bar shell">
+    <p>© <span id="yr"></span> Navkar InfraSynergy Private Limited. All rights reserved.</p>
+    <p>Light Gauge Steel Frame Structures</p>
+  </div>
+</footer>
+
+<a href="#home" class="totop" id="toTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</a>
+
+<!-- GSAP + ScrollTrigger drive the scroll animation when available.
+     If the CDN is blocked or offline, main.js falls back to its own rAF engine. -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
