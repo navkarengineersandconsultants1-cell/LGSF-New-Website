@@ -1,31 +1,84 @@
-name: Deploy to Hostinger
+name: Build and Deploy to Hostinger
 
 on:
   push:
     branches:
+      - main
       - production
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
-  web-deploy:
-    name: Deploy Website to Hostinger
+  build-and-push-production:
+    name: Build & Move Files to Production Branch
     runs-on: ubuntu-latest
     steps:
-      - name: 🚚 Get latest code
+      - name: 🚚 Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🔧 Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 🏗️ Build Project
+        run: |
+          if [ -f "package.json" ]; then
+            echo "package.json found. Installing dependencies..."
+            npm ci || npm install
+            if grep -q '"build":' package.json; then
+              echo "Running npm run build..."
+              npm run build
+            fi
+          else
+            echo "Static web project layout verified."
+          fi
+
+      - name: 🚀 Move Build Output to Production Branch
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: production
+          publish_dir: ./
+          keep_files: false
+          commit_message: "chore(build): automated build update from main"
+
+  deploy-hostinger:
+    name: Deploy Build Files to Hostinger
+    needs: [build-and-push-production]
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Checkout Code
         uses: actions/checkout@v4
 
-      - name: 📁 Sync files via FTP to Hostinger
+      - name: 🔧 Build Project for Deployment
+        run: |
+          if [ -f "package.json" ]; then
+            npm ci || npm install
+            if grep -q '"build":' package.json; then
+              npm run build
+            fi
+          fi
+
+      - name: 📁 Sync Build Files to Hostinger
         uses: SamKirsch/ftp-deploy-action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          port: 21
-          protocol: ftps
+          port: ${{ secrets.FTP_PORT || 21 }}
+          protocol: ${{ secrets.FTP_PROTOCOL || 'ftps' }}
           local-dir: ./
           server-dir: ./public_html/
           exclude: |
             **/.git*
             **/.git*/**
+            **/.github/**
             **/README.md
             **/.vscode/**
+            **/node_modules/**
