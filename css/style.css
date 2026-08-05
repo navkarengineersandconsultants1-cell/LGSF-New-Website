@@ -412,6 +412,65 @@ svg{ width:100%; height:100%; fill:none; stroke:currentColor; stroke-width:1.7;
 
 /* ---- split ---- */
 .split{ display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(2.5rem,6vw,6rem); align-items:center; }
+/* ---------- ABOUT US & PILLARS ---------- */
+.pillars{
+  display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+  gap:1.4rem; margin-bottom: clamp(3rem,6vw,5rem);
+}
+.pillar{
+  background:rgba(var(--w),.03); border:1px solid var(--line-2);
+  border-radius:var(--r); padding:1.8rem 1.4rem; transition:all .35s var(--ease);
+}
+.pillar:hover{
+  border-color:var(--gold-line); background:rgba(240,190,61,.04); transform:translateY(-4px);
+}
+.pillar__ico{ width:48px; height:48px; margin-bottom:1.1rem; }
+.pillar h4{ font-family:var(--f-disp); font-size:1.15rem; font-weight:600; margin:0 0 .6rem; color:var(--txt); }
+.pillar p{ font-size:.88rem; color:var(--txt-2); margin:0; line-height:1.55; }
+
+/* ---------- JOURNEY OF GROWTH CARD ---------- */
+.journey-card{
+  background:linear-gradient(160deg, rgba(var(--w),.04), rgba(var(--w),.01));
+  border:1px solid var(--line-2); border-radius:var(--r); padding:clamp(1.6rem,4vw,3rem);
+  box-shadow:var(--shadow-lg);
+}
+.journey-card__header{ text-align:center; margin-bottom:2.4rem; }
+.journey-card__header h3{
+  font-family:var(--f-disp); font-size:clamp(1.4rem,2.8vw,2.2rem); font-weight:700;
+  margin:0 0 .4rem; background:var(--grad-gold); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+}
+.journey-card__header p{ font-size:.95rem; color:var(--txt-2); margin:0; font-style:italic; }
+
+.journey-grid{ display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
+.journey-step{
+  flex:1 1 240px; background:rgba(var(--w),.03); border:1px solid var(--line);
+  border-radius:12px; padding:1.6rem 1.3rem; position:relative; transition:all .3s var(--ease);
+}
+.journey-step:hover{ border-color:var(--gold-line); background:rgba(240,190,61,.03); }
+.jbadge{
+  display:inline-flex; align-items:center; gap:.5rem; padding:.3rem .75rem;
+  border-radius:100px; font-family:var(--f-disp); font-size:.9rem; font-weight:800;
+  color:#191203; background:var(--grad-btn); margin-bottom:1rem;
+}
+.jbadge span{ font-size:.65rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:rgba(25,18,3,.8); }
+.jico{ width:40px; height:40px; margin-bottom:1rem; }
+.journey-step h4{ font-family:var(--f-disp); font-size:1.05rem; font-weight:700; margin:0 0 .2rem; color:var(--txt); }
+.journey-step em{ font-style:normal; font-size:.78rem; color:var(--gold); display:block; margin-bottom:.8rem; }
+.journey-step ul{ margin:0; padding-left:1.1rem; font-size:.84rem; color:var(--txt-2); }
+.journey-step li{ margin-bottom:.4rem; }
+
+.journey-arrow{ flex:0 0 auto; width:32px; height:32px; display:grid; place-items:center; opacity:.7; }
+@media (max-width: 860px) {
+  .journey-grid{ flex-direction:column; }
+  .journey-arrow{ transform:rotate(90deg); margin:.5rem 0; }
+}
+
+.journey-footer{
+  margin-top:2.2rem; padding:1.1rem; border-radius:10px; background:rgba(240,190,61,.08);
+  border:1px dashed var(--gold-line); text-align:center; font-size:.92rem; color:var(--txt-2);
+}
+.journey-footer strong{ color:var(--gold); }
+
 .split__text .kicker{ margin-bottom:1.2rem; }
 .minitable{ border-top:1px solid var(--line); margin-top:2.2rem; }
 .mt__row{
