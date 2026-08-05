@@ -176,14 +176,8 @@
     // GSAP parses the stylesheet's translateY(105%) into a *pixel* y, so a
     // later { yPercent: 0 } tween would move nothing and the H1 would never
     // animate in. Setting yPercent here makes GSAP own both ends.
-    gsap.set('.hero__title .line > span', { yPercent: 105, y: 0 });
-    gsap.set('.reveal', { opacity: 0, y: 30 });
-
-    /* --- hero drifts out as you leave it --- */
-    gsap.to('.hero__content', {
-      opacity: 0, y: -70, ease: 'none',
-      scrollTrigger: { trigger: '.hero', start: '38% top', end: 'bottom top', scrub: true }
-    });
+    gsap.set('.hero__title .line > span', { yPercent: 0, y: 0 });
+    gsap.set('.hero .reveal', { opacity: 1, y: 0 });
 
     /* --- parallax layers --- */
     gsap.utils.toArray('[data-parallax]').forEach(function (el) {
