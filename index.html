@@ -134,7 +134,7 @@
       engineered in a factory to <strong>±1&nbsp;mm</strong>, erected on site in weeks — not seasons.</p>
 
     <div class="hero__actions reveal">
-      <a href="#about" class="btn btn--gold">Explore the Technology
+      <a href="#technology" class="btn btn--gold">Explore the Technology
         <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
       <a href="#contact" class="btn btn--ghost">Talk to an Engineer</a>
@@ -360,7 +360,7 @@
     <div class="split">
       <div class="split__text">
         <p class="kicker reveal"><span>02</span> What is LGSF?</p>
-        <h2 class="h2 reveal">Steel, formed cold.<br /><span class="grad">Precision, built in.</span></h2>
+        <h2 class="h2 reveal">Light Gauge Steel Frame<br /><span class="grad">Structure</span></h2>
         <p class="lead reveal">Light Gauge Steel Framing is a modern construction technology that uses cold-formed steel
           sections — just <strong>0.8 mm to 1.6 mm</strong> thick — to create the complete structural framework of a
           building. The steel is shaped at room temperature through roll-forming machines, with no heat applied, so it
@@ -377,11 +377,71 @@
 
       <div class="split__media">
         <div class="stackimg" data-parallax="0.07">
-          <img src="assets/img/lgsf-longspan.jpg" alt="Long-span light gauge steel frame structure under erection" />
-          <span class="stackimg__tag">Roll-formed C-sections · site erection</span>
+          <img src="assets/img/tech-frame.png" alt="Custom 3D Render of Light Gauge Steel Frame Structure" />
+          <span class="stackimg__tag">Cold-Formed Galvanized Steel C-Studs · Precision Build</span>
         </div>
-        <div class="stackimg stackimg--sm" data-parallax="0.16">
-          <img src="assets/img/panel-interior.jpg" alt="Internal LGSF wall panels and studs" />
+      </div>
+    </div>
+
+    <!-- ══════════════ 3D TECHNICAL ANIMATED VIDEO PLAYER ══════════════ -->
+    <div class="lgsf-vplayer reveal" id="lgsfVplayer">
+      <div class="vplayer__top">
+        <div class="vplayer__title">
+          <span class="vplayer__rec"><span class="rec-dot"></span> 3D ANIMATION</span>
+          <h3>LGSF Structural Assembly Walkthrough</h3>
+        </div>
+        <div class="vplayer__chapter-select">
+          <button class="vchap-btn is-active" type="button" data-chap="building">Full Building 3D Assembly</button>
+          <button class="vchap-btn" type="button" data-chap="wall">Wall Detail</button>
+          <button class="vchap-btn" type="button" data-chap="flat">Floor Joist &amp; Roof</button>
+          <button class="vchap-btn" type="button" data-chap="yt">▶ YouTube Video Stream</button>
+        </div>
+      </div>
+
+      <div class="vplayer__screen" id="vpScreen">
+        <canvas id="vpCanvas" width="900" height="440" class="vplayer__canvas"></canvas>
+
+        <div class="vplayer__overlay">
+          <div class="vp-callout" id="vpCallout">
+            <span class="vp-callout__step" id="vpStepNum">STEP 01 / 05</span>
+            <h4 id="vpStepTitle">Plinth &amp; Steel Frame Erection</h4>
+            <p id="vpStepDesc">Wall steel C/U stud members (0.8–1.6mm) anchored to concrete plinth foundation.</p>
+            <div class="vp-callout__specs" id="vpStepSpecs">
+              <span><b>Material:</b> Galvanized C-Studs</span>
+              <span><b>Fixing:</b> High-Tensile Anchor Bolts</span>
+            </div>
+          </div>
+        </div>
+
+        <button class="vplayer__center-play" id="vpCenterPlay" type="button" aria-label="Play 3D Assembly Video">
+          <svg viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+        </button>
+      </div>
+
+      <div class="vplayer__controls">
+        <div class="vplayer__timeline" id="vpTimeline">
+          <div class="vp-track">
+            <div class="vp-fill" id="vpFill"></div>
+            <div class="vp-handle" id="vpHandle"></div>
+          </div>
+        </div>
+
+        <div class="vplayer__bar">
+          <div class="vp-left">
+            <button class="vp-btn is-playing" id="vpPlayPause" type="button" aria-label="Play/Pause">
+              <svg class="ico-play" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <svg class="ico-pause" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+            </button>
+            <button class="vp-btn" id="vpRestart" type="button" title="Replay Chapter">
+              <svg viewBox="0 0 24 24"><path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+            </button>
+            <span class="vp-time" id="vpTime">00:00 / 00:30</span>
+          </div>
+
+          <div class="vp-right">
+            <span class="vp-badge">4K 60FPS CAD</span>
+            <button class="vp-btn" id="vpSpeed" type="button" title="Playback Speed">1.0x</button>
+          </div>
         </div>
       </div>
     </div>

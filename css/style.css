@@ -137,6 +137,23 @@
 :root[data-theme="light"] .brand__logo{ filter:drop-shadow(0 3px 8px rgba(150,101,10,.28)); }
 :root[data-theme="light"] .member__ph img{ filter:grayscale(1) contrast(1.02) brightness(1.04); }
 
+/* ---------- PRELOADER ---------- */
+.preloader{
+  position:fixed; inset:0; z-index:999999; background:#07080a;
+  display:flex; align-items:center; justify-content:center;
+  transition:opacity .4s var(--ease), visibility .4s var(--ease);
+}
+.preloader.is-done{
+  opacity:0 !important; visibility:hidden !important; pointer-events:none !important; display:none !important;
+}
+.preloader__inner{ text-align:center; display:flex; flex-direction:column; align-items:center; }
+.preloader__mark{ width:64px; height:64px; animation:prePulse 1.8s ease-in-out infinite; }
+.preloader__bar{ width:160px; height:3px; background:rgba(255,255,255,.1); border-radius:100px; margin:1.2rem 0 .8rem; overflow:hidden; }
+.preloader__bar span{ display:block; height:100%; width:0%; background:var(--grad-gold); transition:width .2s ease; }
+.preloader__txt{ font-family:var(--f-disp); font-size:.7rem; font-weight:700; letter-spacing:.28em; color:var(--gold); margin:0; }
+
+@keyframes prePulse{ 0%,100%{ transform:scale(1); opacity:.8; } 50%{ transform:scale(1.08); opacity:1; } }
+
 *,*::before,*::after{ box-sizing:border-box; }
 html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
 body{
@@ -560,6 +577,138 @@ svg{ width:100%; height:100%; fill:none; stroke:currentColor; stroke-width:1.7;
 }
 .journey__banner svg{ width:20px; height:20px; flex:0 0 20px; color:var(--gold); }
 .journey__banner strong{ color:var(--gold); font-weight:600; }
+
+/* ============================================================
+   LGSF INTERACTIVE EXPLAINER (WALL, SLOPING ROOF & FLAT SLAB)
+   ============================================================ */
+/* ============================================================
+   3D TECHNICAL ANIMATED VIDEO PLAYER (CINEMATIC CAD SIMULATION)
+   ============================================================ */
+.lgsf-vplayer{
+  margin-top:clamp(3.5rem,7vw,5.5rem); border:1px solid var(--line-2); border-radius:18px;
+  background:#090d16; box-shadow:0 25px 60px -15px rgba(0,0,0,.7);
+  overflow:hidden; position:relative; isolation:isolate;
+}
+
+.vplayer__top{
+  display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;
+  padding:1rem 1.6rem; border-bottom:1px solid var(--line-2); background:rgba(15,23,42,.9);
+}
+.vplayer__title{ display:flex; align-items:center; gap:.9rem; }
+.vplayer__rec{
+  display:inline-flex; align-items:center; gap:.4rem; font-family:var(--f-disp);
+  font-size:.7rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase;
+  color:#EF4444; padding:.25rem .6rem; border-radius:100px; background:rgba(239,68,68,.12);
+  border:1px solid rgba(239,68,68,.3);
+}
+.rec-dot{ width:6px; height:6px; border-radius:50%; background:#EF4444; animation:pulse 1.8s infinite; }
+
+.vplayer__title h3{
+  font-family:var(--f-disp); font-size:1.05rem; font-weight:700; color:var(--txt); margin:0;
+}
+
+.vplayer__chapter-select{ display:flex; gap:.4rem; flex-wrap:wrap; }
+.vchap-btn{
+  padding:.45rem .95rem; border-radius:100px; border:1px solid var(--line-2);
+  background:rgba(255,255,255,.04); font-family:var(--f-disp); font-size:.78rem;
+  font-weight:600; color:var(--txt-2); cursor:pointer; transition:all .3s var(--ease);
+}
+.vchap-btn:hover{ border-color:var(--gold-line); color:var(--txt); }
+.vchap-btn.is-active{
+  background:var(--grad-btn); color:#191203; border-color:transparent;
+  box-shadow:0 4px 14px rgba(240,190,61,.4);
+}
+
+.vplayer__screen{
+  position:relative; width:100%; height:min(55vh,440px); background:#060a11;
+  overflow:hidden; display:flex; align-items:center; justify-content:center;
+  background-image:linear-gradient(rgba(240,190,61,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(240,190,61,.04) 1px, transparent 1px);
+  background-size:32px 32px;
+}
+
+.vplayer__canvas{
+  position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;
+}
+
+.vplayer__overlay{
+  position:absolute; inset:0; pointer-events:none; padding:1.8rem;
+  display:flex; flex-direction:column; justify-content:flex-end;
+  background:linear-gradient(to top, rgba(6,10,17,.92) 0%, transparent 60%);
+}
+
+.vp-callout{
+  max-width:440px; padding:1.2rem 1.4rem; border-radius:14px;
+  background:rgba(15,23,42,.85); border:1px solid var(--gold-line);
+  backdrop-filter:blur(12px); box-shadow:0 10px 30px rgba(0,0,0,.5);
+  transform:translateY(0); transition:all .4s var(--ease); pointer-events:auto;
+}
+.vp-callout__step{
+  font-family:var(--f-disp); font-size:.68rem; font-weight:800; letter-spacing:.16em;
+  color:var(--gold); display:inline-block; margin-bottom:.3rem;
+}
+.vp-callout h4{
+  font-family:var(--f-disp); font-size:1.15rem; font-weight:700; color:var(--txt); margin:0 0 .4rem;
+}
+.vp-callout p{
+  font-size:.86rem; color:var(--txt-2); margin:0 0 .8rem; line-height:1.5;
+}
+.vp-callout__specs{
+  display:flex; flex-wrap:wrap; gap:.8rem; border-top:1px solid var(--line); padding-top:.6rem;
+  font-size:.76rem; color:var(--txt-3);
+}
+.vp-callout__specs b{ color:var(--gold); }
+
+.vplayer__center-play{
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  width:68px; height:68px; border-radius:50%; background:var(--grad-btn);
+  border:none; color:#191203; display:grid; place-items:center; cursor:pointer;
+  box-shadow:0 10px 30px rgba(240,190,61,.5); transition:transform .3s var(--ease), opacity .3s;
+  z-index:4;
+}
+.vplayer__center-play svg{ width:28px; height:28px; fill:currentColor; margin-left:4px; }
+.vplayer__center-play:hover{ transform:translate(-50%,-50%) scale(1.1); }
+.vplayer__screen.is-playing .vplayer__center-play{ opacity:0; pointer-events:none; }
+
+.vplayer__controls{
+  background:rgba(15,23,42,.95); border-top:1px solid var(--line-2); padding:.8rem 1.4rem;
+}
+.vplayer__timeline{
+  width:100%; height:12px; display:flex; align-items:center; cursor:pointer; margin-bottom:.6rem;
+}
+.vp-track{
+  width:100%; height:4px; border-radius:100px; background:rgba(255,255,255,.12);
+  position:relative; transition:height .2s;
+}
+.vplayer__timeline:hover .vp-track{ height:6px; }
+.vp-fill{ width:0%; height:100%; border-radius:100px; background:var(--grad-btn); }
+.vp-handle{
+  position:absolute; top:50%; left:0%; transform:translate(-50%,-50%);
+  width:14px; height:14px; border-radius:50%; background:var(--gold);
+  box-shadow:0 0 10px var(--gold); opacity:0; transition:opacity .2s;
+}
+.vplayer__timeline:hover .vp-handle{ opacity:1; }
+
+.vplayer__bar{
+  display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;
+}
+.vp-left, .vp-right{ display:flex; align-items:center; gap:.8rem; }
+.vp-btn{
+  background:none; border:none; color:var(--txt-2); cursor:pointer;
+  padding:.4rem; border-radius:8px; display:grid; place-items:center;
+  transition:color .2s, background .2s; font-family:var(--f-disp); font-size:.8rem; font-weight:700;
+}
+.vp-btn svg{ width:20px; height:20px; stroke:currentColor; stroke-width:2; fill:none; }
+.vp-btn:hover{ color:var(--gold); background:rgba(255,255,255,.06); }
+.vp-btn.is-playing .ico-play{ display:none; }
+.vp-btn.is-playing .ico-pause{ display:block; }
+.vp-btn:not(.is-playing) .ico-pause{ display:none; }
+
+.vp-time{ font-family:var(--f-disp); font-size:.8rem; color:var(--txt-3); letter-spacing:.05em; }
+.vp-badge{
+  font-family:var(--f-disp); font-size:.68rem; font-weight:800; letter-spacing:.12em;
+  color:var(--gold); padding:.2rem .55rem; border-radius:4px; background:rgba(240,190,61,.12);
+  border:1px solid rgba(240,190,61,.25);
+}
 
 /* ============================================================
    PARALLAX BREAK
