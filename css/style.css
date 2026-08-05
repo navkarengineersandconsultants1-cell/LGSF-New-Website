@@ -139,9 +139,7 @@
 
 /* ---------- PRELOADER ---------- */
 .preloader{
-  position:fixed; inset:0; z-index:999999; background:#07080a;
-  display:flex; align-items:center; justify-content:center;
-  transition:opacity .4s var(--ease), visibility .4s var(--ease);
+  display:none !important; opacity:0 !important; visibility:hidden !important; pointer-events:none !important;
 }
 .preloader.is-done{
   opacity:0 !important; visibility:hidden !important; pointer-events:none !important; display:none !important;
