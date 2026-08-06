@@ -345,7 +345,7 @@ svg{ width:100%; height:100%; fill:none; stroke:currentColor; stroke-width:1.7;
 
 .hero__title{
   font-family:var(--f-disp); font-weight:800; letter-spacing:-.045em;
-  font-size:clamp(2.08rem,6.08vw,5.28rem); line-height:.94; margin:0 0 clamp(1rem,2.2vh,1.6rem);
+  font-size:clamp(1.66rem,4.86vw,4.22rem); line-height:.94; margin:0 0 clamp(1rem,2.2vh,1.6rem);
 }
 .hero__title .line{ display:block; overflow:hidden; }
 .hero__title .line > span{ display:block; }
