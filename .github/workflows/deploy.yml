@@ -17,11 +17,14 @@ jobs:
   deploy-hostinger:
     name: Sync Website Files to Hostinger
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: 🚚 Checkout Code
         uses: actions/checkout@v4
 
-      - name: 📁 Sync Build Files to Hostinger
+      - name: 📁 Sync Build Files to Hostinger (Primary)
+        id: deploy1
+        continue-on-error: true
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER || secrets.FTP_HOST }}
@@ -30,6 +33,7 @@ jobs:
           port: ${{ secrets.FTP_PORT || 21 }}
           protocol: ${{ secrets.FTP_PROTOCOL || 'ftps' }}
           security: loose
+          timeout: 180000
           local-dir: ./
           server-dir: public_html/
           exclude: |
@@ -40,3 +44,23 @@ jobs:
             **/.vscode/**
             **/node_modules/**
 
+      - name: 📁 Sync Build Files to Hostinger (Automatic Retry Fallback)
+        if: steps.deploy1.outcome != 'success'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER || secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT || 21 }}
+          protocol: ${{ secrets.FTP_PROTOCOL || 'ftps' }}
+          security: loose
+          timeout: 180000
+          local-dir: ./
+          server-dir: public_html/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/README.md
+            **/.vscode/**
+            **/node_modules/**
