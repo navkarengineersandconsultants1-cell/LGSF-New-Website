@@ -117,7 +117,7 @@
     }
   });
 
-  var sectionIds = ['technology', 'advantage', 'applications', 'specs', 'process', 'projects', 'team'];
+  var sectionIds = ['about', 'technology', 'bottleneck', 'advantage', 'when', 'applications', 'specs', 'process', 'erection', 'projects', 'team', 'contact'];
   var navMap = {};
   sectionIds.forEach(function (id) {
     var a = navLinks.querySelector('a[href="#' + id + '"]');
