@@ -44,8 +44,14 @@ jobs:
             **/.vscode/**
             **/node_modules/**
 
-      - name: 📁 Sync Build Files to Hostinger (Automatic Retry Fallback)
+      - name: ⏳ Wait before retry
         if: steps.deploy1.outcome != 'success'
+        run: sleep 15
+
+      - name: 📁 Sync Build Files to Hostinger (Automatic Retry Fallback 1 - FTPS)
+        id: deploy2
+        if: steps.deploy1.outcome != 'success'
+        continue-on-error: true
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER || secrets.FTP_HOST }}
@@ -53,6 +59,27 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT || 21 }}
           protocol: ${{ secrets.FTP_PROTOCOL || 'ftps' }}
+          security: loose
+          timeout: 180000
+          local-dir: ./
+          server-dir: public_html/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/README.md
+            **/.vscode/**
+            **/node_modules/**
+
+      - name: 📁 Sync Build Files to Hostinger (Automatic Retry Fallback 2 - Plain FTP)
+        if: steps.deploy1.outcome != 'success' && steps.deploy2.outcome != 'success'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER || secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT || 21 }}
+          protocol: ftp
           security: loose
           timeout: 180000
           local-dir: ./
