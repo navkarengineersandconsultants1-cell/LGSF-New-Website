@@ -497,7 +497,7 @@
         'Built-up area: ' + (f.area.value || '—') + '\n\n' +
         'Brief:\n' + (f.msg.value || '—');
 
-      window.location.href = 'mailto:jayendra.pathak@navkaris.com,nihar.nathwani@navkaris.com,navkarinfrasynergy@gmail.com'
+      window.location.href = 'mailto:jayendra.pathak@navkaris.com,nihar.nathwani@navkaris.com,navkarinfrasynergy@gmail.com,info@navkaris.com'
         + '?subject=' + encodeURIComponent('LGSF enquiry — ' + f.name.value + ' (' + f.type.value + ')')
         + '&body=' + encodeURIComponent(body);
 
