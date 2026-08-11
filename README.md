@@ -109,7 +109,7 @@ Flipped by the toggle in the header. The initial load follows the visitor's OS s
 The project enquiry form submits directly to the company email via `mailto:`:
 
 - **Target Emails:** `navkarinfrasynergy@gmail.com`, `info@navkaris.com`
-- **Phone:** `+91 90332 91244` (Jayendra Pathak — Director), `+91 97277 33126` (Nihar Nathwani — Strategic Partner - Sales)
+- **Phone:** `+91 90332 91244` (Director), `+91 97277 33126` (Sales)
 - **Location:** Vadodara, Gujarat, India
 
 To connect the form to a server-side endpoint (e.g. Formspree, Web3Forms), edit the form submit listener at the bottom of `js/main.js`.
