@@ -497,12 +497,12 @@
         'Built-up area: ' + (f.area.value || '—') + '\n\n' +
         'Brief:\n' + (f.msg.value || '—');
 
-      window.location.href = 'mailto:jayendra.pathak@navkaris.com,nihar.nathwani@navkaris.com,navkarinfrasynergy@gmail.com,info@navkaris.com'
+      window.location.href = 'mailto:navkarinfrasynergy@gmail.com,info@navkaris.com'
         + '?subject=' + encodeURIComponent('LGSF enquiry — ' + f.name.value + ' (' + f.type.value + ')')
         + '&body=' + encodeURIComponent(body);
 
       note.style.color = '';
-      note.textContent = 'Opening your email app… if nothing happens, write to jayendra.pathak@navkaris.com or call +91 90332 91244 / +91 97277 33126.';
+      note.textContent = 'Opening your email app… if nothing happens, write to navkarinfrasynergy@gmail.com or call +91 90332 91244 / +91 97277 33126.';
     });
   }
 
